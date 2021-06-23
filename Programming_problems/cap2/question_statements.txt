@@ -1,0 +1,10 @@
+Book: Operating System Concepts
+Chapter 2: Operating-System Structures
+
+Question 2.24 - Write a program that copies the contents of one file to a 
+destination file by prompting the user for the name of the source and destination 
+files. Write this program using either the POSIX or Windows API. Be sure to 
+include all necessary error checking, including ensuring that the source file exists.
+	Once you have correctly designed and tested the program, if you used a system 
+that supports it, run the program using utility that traces system calls. (In Linux 
+systems, use the command 'strace').
