@@ -27,6 +27,7 @@
 #define INVALID_FD -1
 #define READ_FAILED -1
 #define WRITE_FAILED -1
+#define CLOSE_ERROR -1
 
 //Data types:
 typedef unsigned char byte;
@@ -211,11 +212,28 @@ bool copy_from_to(char source_file_name[], char destination_file_name[])
 	//Exit setup:
 EXIT_COPY_FROM_TO:
 	//Close open files:
-	if(dest_fd)
-		close(dest_fd);
+	if(dest_fd != INVALID_FD)
+	{
+		if(close(dest_fd) == CLOSE_ERROR)
+		{
+			handle_error(
+				function_name,
+				"Destination file was not properly closed.",
+				errno);
+		}
+	}
+		
 
-	if(src_fd)
-		close(src_fd);
+	if(src_fd != INVALID_FD)
+	{
+		if(close(src_fd) == CLOSE_ERROR)
+		{
+			handle_error(
+				function_name,
+				"Source file was not properly closed.",
+				errno);
+		}
+	}	
 	
 	//Return the final result:
 	return return_value;
