@@ -10,4 +10,19 @@ The project will be divided in the following four parts.
 
 I - Kernel Moduler Overview:
 	- The command line 'lsmod' list all kernel modules that are currently 
-	loaded.
+	loaded;
+	-The program 'simple.c' is a simple kernel module that illustrates the
+	process of loading and unloading a kernel module;
+	-The function 'printk()' is the kernel equivalent of 'printf()'. Its 
+	output can be read by the 'dmesg' command;
+	-Compile the 'simple.c' program using the Makefile with command 'make';
+II - Loading and Removing Kernel Modules:
+	-The command 'insmod' is used to load the module. In order to load the 
+	kernel module 'simple.ko', the following command must be executed:
+	Ex: "$ sudo insmod simple.ko" 
+	-In order to remove a module from the kernel, use the command 'rmmod'.
+	Ex: "$ sudo rmmod simple"
+	OBS: Note that it is not necessary to use the suffix '.ko' when removing
+	a kernel module.
+	-To clean the kernel log message buffer, use: "$ sudo dmesg -c". This is
+	useful to avoid that the buffer fills up;
