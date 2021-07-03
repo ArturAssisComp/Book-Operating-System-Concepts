@@ -1,0 +1,13 @@
+Author: Artur Assis Alves
+Date: 07/03/2021
+Title: Programming project 1 -> Linux Kernel Module
+
+Description: In this project we are going to write kernel code that will 
+interact with the Linux kernel. It is important to use a virtual machine to 
+avoid any further problem like crashing the system or corrupting something.
+	The virtual machine that will be used in this project is: ???
+The project will be divided in the following four parts.
+
+I - Kernel Moduler Overview:
+	- The command line 'lsmod' list all kernel modules that are currently 
+	loaded.
