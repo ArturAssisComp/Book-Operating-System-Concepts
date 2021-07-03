@@ -1,0 +1,86 @@
+Title: Strace Report
+
+Description: This report was generated using the command strace applied to the 
+program FileCopy. 
+OBS: ./strace_experiment/output_file.txt was created each time the command strace 
+was executed.
+
+(1)-> strace -o ./strace_experiment/strace_result.txt -AT ./FileCopy ./strace_experiment/input_file.txt ./strace_experiment/output_file.txt
+execve("./FileCopy", ["./FileCopy", "./strace_experiment/input_file.t"..., "./strace_experiment/output_file."...], 0x7ffd7f8ec078 /* 54 vars */) = 0 <0.000385>
+brk(NULL)                               = 0x17f2000 <0.000060>
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe3e431d80) = -1 EINVAL (Invalid argument) <0.000012>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000016>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000029>
+fstat(3, {st_mode=S_IFREG|0644, st_size=106354, ...}) = 0 <0.000010>
+mmap(NULL, 106354, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f26f39d8000 <0.000013>
+close(3)                                = 0 <0.000009>
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000015>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260r\2\0\0\0\0\0"..., 832) = 832 <0.000010>
+lseek(3, 64, SEEK_SET)                  = 64 <0.000009>
+read(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784) = 784 <0.000009>
+lseek(3, 848, SEEK_SET)                 = 848 <0.000008>
+read(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32) = 32 <0.000009>
+lseek(3, 880, SEEK_SET)                 = 880 <0.000008>
+read(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0U\233\227\2\276\2761\306\3212\310\334\\\310\207g"..., 68) = 68 <0.000009>
+fstat(3, {st_mode=S_IFREG|0755, st_size=3184704, ...}) = 0 <0.000009>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f26f39d6000 <0.000011>
+lseek(3, 64, SEEK_SET)                  = 64 <0.000009>
+read(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784) = 784 <0.000009>
+lseek(3, 848, SEEK_SET)                 = 848 <0.000009>
+read(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32) = 32 <0.000009>
+lseek(3, 880, SEEK_SET)                 = 880 <0.000008>
+read(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0U\233\227\2\276\2761\306\3212\310\334\\\310\207g"..., 68) = 68 <0.000009>
+mmap(NULL, 1868728, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f26f380d000 <0.000012>
+mprotect(0x7f26f3832000, 1679360, PROT_NONE) = 0 <0.000016>
+mmap(0x7f26f3832000, 1372160, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f26f3832000 <0.000017>
+mmap(0x7f26f3981000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x174000) = 0x7f26f3981000 <0.000012>
+mmap(0x7f26f39cc000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1be000) = 0x7f26f39cc000 <0.000016>
+mmap(0x7f26f39d2000, 13240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f26f39d2000 <0.000025>
+close(3)                                = 0 <0.000010>
+arch_prctl(ARCH_SET_FS, 0x7f26f39d7540) = 0 <0.000010>
+mprotect(0x7f26f39cc000, 12288, PROT_READ) = 0 <0.000016>
+mprotect(0x403000, 4096, PROT_READ)     = 0 <0.000013>
+mprotect(0x7f26f3a1d000, 4096, PROT_READ) = 0 <0.000014>
+munmap(0x7f26f39d8000, 106354)          = 0 <0.000030>
+openat(AT_FDCWD, "./strace_experiment/input_file.txt", O_RDONLY) = 3 <0.000017>
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0 <0.000011>
+brk(NULL)                               = 0x17f2000 <0.000010>
+brk(0x1813000)                          = 0x1813000 <0.000012>
+brk(NULL)                               = 0x1813000 <0.000010>
+write(1, "Source file successfully opened."..., 33) = 33 <0.000020>
+creat("./strace_experiment/output_file.txt", 0770) = 4 <0.000092>
+write(1, "Destination file successfully cr"..., 39) = 39 <0.000016>
+read(3, "This file has ~3,5KB (3 511 B) o"..., 1750) = 1750 <0.000028>
+write(4, "This file has ~3,5KB (3 511 B) o"..., 1750) = 1750 <0.000092>
+read(3, "********************************"..., 1750) = 1750 <0.000014>
+write(4, "********************************"..., 1750) = 1750 <0.000025>
+read(3, "*********/\n", 1750)           = 11 <0.000032>
+write(4, "*********/\n", 11)            = 11 <0.000022>
+read(3, "", 1750)                       = 0 <0.000011>
+write(4, "", 0)                         = 0 <0.000012>
+close(4)                                = 0 <0.000023>
+close(3)                                = 0 <0.000012>
+write(1, "Content from the file './strace_"..., 135) = 135 <0.000031>
+exit_group(0)                           = ?
++++ exited with 0 +++
+
+Statistical Summary:
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 32.72    0.000124          17         7           write
+ 26.12    0.000099          99         1           creat
+ 12.40    0.000047          11         4           mprotect
+  6.60    0.000025          25         1           munmap
+  6.33    0.000024           8         3           openat
+  5.01    0.000019           1        11           read
+  5.01    0.000019           4         4           brk
+  3.96    0.000015           3         4           close
+  1.85    0.000007           2         3           fstat
+  0.00    0.000000           0         6           lseek
+  0.00    0.000000           0         7           mmap
+  0.00    0.000000           0         1         1 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         2         1 arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000379           6        55         2 total
