@@ -14,7 +14,7 @@ I - Kernel Moduler Overview:
 	-The program 'simple.c' is a simple kernel module that illustrates the
 	process of loading and unloading a kernel module;
 	-The function 'printk()' is the kernel equivalent of 'printf()'. Its 
-	output can be read by the 'dmesg' command;
+	output can be read using the 'dmesg' command;
 	-Compile the 'simple.c' program using the Makefile with command 'make';
 II - Loading and Removing Kernel Modules:
 	-The command 'insmod' is used to load the module. In order to load the 
