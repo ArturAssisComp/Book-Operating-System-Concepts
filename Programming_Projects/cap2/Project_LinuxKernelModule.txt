@@ -26,3 +26,8 @@ II - Loading and Removing Kernel Modules:
 	a kernel module.
 	-To clean the kernel log message buffer, use: "$ sudo dmesg -c". This is
 	useful to avoid that the buffer fills up;
+III - The /proc File System:
+	-The /proc file is a pseudo-file that exists only in kernel memory. It stores
+	some statistical information about each process;
+	-The program hello.c creates a /proc that prints "Hello World!". Add the 
+	module hello.ko and execute "$ cat /proc/hello" to read the message;
