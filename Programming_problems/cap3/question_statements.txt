@@ -4,3 +4,9 @@ Chapter 2: Operating-System Structures
 Question 3.18 - Write a C program that forks a child process that ultimately becomes 
 a zombie process (defunct process of which parent did not have called wait). This combie 
 process must remain in the system for at least 10 seconds.
+
+Question 3.19 - Write a C program that determines the amount of time necessary to run a 
+command from the command line. This program will run "./program_name <command>" and
+will report the amount of elapsed time to run the specific command. This will involve 
+using fork(), exec(), and gettimeofday() functions. It will also require the use of
+two different IPC mechanisms.
