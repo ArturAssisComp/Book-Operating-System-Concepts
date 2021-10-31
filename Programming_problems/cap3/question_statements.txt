@@ -10,3 +10,12 @@ command from the command line. This program will run "./program_name <command>" 
 will report the amount of elapsed time to run the specific command. This will involve 
 using fork(), exec(), and gettimeofday() functions. It will also require the use of
 two different IPC mechanisms.
+
+Question 3.20 - Create a pid manager. The following constants must be used to identify
+the range of possible pid values: MIN_PID and MAX_PID and they must be defined as 
+macros. Moreover, the following API must be implemented:
+(1) - int allocate_map(void) --> Create and initializes a data structure for representing
+                                 pids; returns -1 if unsuccessful, 1 if successful.
+(2) - int allocate_pid(void) --> Allocates and resutns a pid; returns -1 if unable to 
+                                 allocate a pid (all pids are in use);
+(3) - void release_pid(int pid) --> releases a pid;

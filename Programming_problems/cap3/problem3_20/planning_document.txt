@@ -1,0 +1,59 @@
+General notes:
+	- The data structure that will be used is an array of bits (bitmap);
+
+Components:
+	- bit_array ->
+		Types:
+
+		typedef enum
+		{
+			ZERO,
+			ONE,
+			INVALID
+		}bit_value;
+
+		typedef <unsigned_integer> bit_group
+
+		typedef struct
+		{
+			bit_group *array_of_bit_groups;
+			size_t num_of_bit_groups;    
+			site_t size;                 //Number of bits in the array;
+			site_t num_of_set_bits;
+		}bit_array;
+
+		API:
+		(1) - bit_array *create_bit_array(size_t size);
+		(2) - void delete_bit_array(bit_array **target_bit_array_address);
+		(3) - bit_value get_bit_value(bit_array *target_bit_array, size_t index);
+		(4) - int assign_value_to_bit(bit_array *target_bit_array, size_t index, bit_value value);
+		(5) - size_t get_bit_array_size(bit_array *target_bit_array);
+		(6) - size_t get_num_of_set_bits(bit_array *target_bit_array);
+
+	- pid_table ->
+
+		Types:
+		typedef struct
+		{
+			bit_array *pid_bit_array;
+			int min_pid, max_pid;
+			int min_pid_available;
+		}pid_table;
+
+		API:
+		(1) - pid_table *create_pid_table(int min_pid, int max_pid);
+		(2) - void delete_pid_table(pid_table **target_pid_table_address);
+		(3) - int check_pid(pid_table *target_pid_table, int pid); --> Check if PID with number 'pid' is
+                      in use;
+		(4) - int free_pid(pid_table *target_pid_table, int pid);
+		(5) - int alloc_min_pid_available(pid_table *target_pid_table);	
+
+	- pid_manager ->
+		Macros:
+		#define MIN_PID <min_value>
+		#define MAX_PID <max_value>
+                
+		API:
+		(1) - int allocate_map(void);
+		(2) - int allocate_pid(void);
+		(3) - void release_pid(int pid);
