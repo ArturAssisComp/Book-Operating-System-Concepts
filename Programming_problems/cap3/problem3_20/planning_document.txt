@@ -46,7 +46,7 @@ Components:
 		(3) - int check_pid(pid_table *target_pid_table, int pid); --> Check if PID with number 'pid' is
                       in use;
 		(4) - int free_pid(pid_table *target_pid_table, int pid);
-		(5) - int alloc_min_pid_available(pid_table *target_pid_table);	
+		(5) - int alloc_min_pid_available(pid_table *target_pid_table, int *pid_allocated_address);	
 
 	- pid_manager ->
 		Macros:
