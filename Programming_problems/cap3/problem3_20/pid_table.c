@@ -175,7 +175,7 @@ int alloc_min_pid_available(pid_table *target_pid_table, int *pid_allocated_addr
 	index = target_pid_table->min_pid_available - target_pid_table->min_pid;
 	if(assign_value_to_bit(target_pid_table->pid_bit_array, index, ONE) == -1)
 	{
-		fprintf(stderr, "free_pid:pid table corrupted.\n");
+		fprintf(stderr, "alloc_min_pid_available:pid table corrupted.\n");
 		exit(EXIT_FAILURE);
 	}
 	result = 1;
