@@ -19,3 +19,9 @@ macros. Moreover, the following API must be implemented:
 (2) - int allocate_pid(void) --> Allocates and resutns a pid; returns -1 if unable to 
                                  allocate a pid (all pids are in use);
 (3) - void release_pid(int pid) --> releases a pid;
+
+Question 3.21 - Write a C program using fork() system call that generates the Collatz
+sequence in the child process. The child will print the sequence.
+
+Question 3.22 - Repeat 3.21 but using shared memory. The parent must print the result 
+after the child returning it.
