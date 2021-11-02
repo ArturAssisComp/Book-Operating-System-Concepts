@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		command = argv[1];
 		//-------------------------------------------------------------
 		//Create the shared memory region:
-		shared_memory_fd = shm_open(shared_memory_name, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
+		shared_memory_fd = shm_open(shared_memory_name, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 
 		if (shared_memory_fd == -1)
 		{
