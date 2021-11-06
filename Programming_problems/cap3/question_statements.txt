@@ -25,3 +25,7 @@ sequence in the child process. The child will print the sequence.
 
 Question 3.22 - Repeat 3.21 but using shared memory. The parent must print the result 
 after the child returning it.
+
+Question 3.23 - Modify the date server shown in Figure 3.27 so that it delivers a quote
+of the day rather than the current date. The date client shown in Figure 3.28 can be used
+to read the quotes returned by the server.
