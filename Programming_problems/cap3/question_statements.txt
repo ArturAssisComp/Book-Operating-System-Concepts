@@ -29,3 +29,9 @@ after the child returning it.
 Question 3.23 - Modify the date server shown in Figure 3.27 so that it delivers a quote
 of the day rather than the current date. The date client shown in Figure 3.28 can be used
 to read the quotes returned by the server.
+
+Question 3.25 - Create an Echo server/client.
+
+Question 3.26 - Design a program using ordinary pipes in which one process sends 
+a string message to a second process, and the second process reverses the case 
+of each character in the message and sends it back to the first process.
