@@ -35,3 +35,10 @@ Question 3.25 - Create an Echo server/client.
 Question 3.26 - Design a program using ordinary pipes in which one process sends 
 a string message to a second process, and the second process reverses the case 
 of each character in the message and sends it back to the first process.
+
+Question 3.27 - Design a file-copying program named filecopy.c usign ordinary pipes. 
+This program will be passed two parameters: the name of the file to be copied and 
+the name of the destination file. The program will then create an ordinary pipe 
+and write the contents of the file to be copied to the pipe. The child process 
+will read this file from the pipe and write it to the destination file.
+
