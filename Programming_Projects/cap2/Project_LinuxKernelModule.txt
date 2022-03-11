@@ -31,3 +31,11 @@ III - The /proc File System:
 	some statistical information about each process;
 	-The program hello.c creates a /proc that prints "Hello World!". Add the 
 	module hello.ko and execute "$ cat /proc/hello" to read the message;
+IV  - Assignments:
+	- The first assignment is to create a /proc file named /proc/jiffies 
+      that reports the current value of jiffies when the /proc/jiffies file is 
+	read, such as with the command 
+	$ cat /proc/seconds
+	- The second assignment is to design a kernel module that creates a proc 
+	file named /proc/seconds that reports the number of elapsed seconds since 
+	the kernel module was loaded.
